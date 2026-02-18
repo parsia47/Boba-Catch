@@ -2,7 +2,8 @@
 
 A fun browser-based arcade game where you choose your boba drink and catch falling pearls while dodging bombs!
 
-🎮 Live Demo
+🎮 Live Demo:
+https://parsia47.github.io/Boba-Catch/
 
 About
 
@@ -12,7 +13,7 @@ Features
 
 4 playable drink themes (Milk Tea, Taro, Matcha, Strawberry)
 
-Progressively increasing difficulty with level system
+Progressively increasing difficulty with a level system
 
 Bonus items with higher point values
 
@@ -50,7 +51,7 @@ Survive as long as possible — it gets faster each level!
 
 Getting Started
 
-No install needed. Just clone and open the file:
+No installation needed. Just clone and open the file:
 
 git clone https://github.com/parsia47/Boba-Catch.git
 cd Boba-Catch
