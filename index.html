@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧋 Boba Catch!</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- SELECT SCREEN -->
+<div id="select-screen" class="screen active">
+  <div class="title">🧋 Boba Catch!</div>
+  <div class="subtitle">Choose your drink & start catching!</div>
+
+  <div class="drinks-grid">
+    <button class="drink-btn selected" data-drink="milk-tea" data-color="#c9956a" data-emoji="🧋" onclick="selectDrink(this)">
+      <span class="drink-icon">🧋</span>
+      <span class="drink-name">Milk Tea</span>
+    </button>
+    <button class="drink-btn" data-drink="taro" data-color="#9b7fc7" data-emoji="🫐" onclick="selectDrink(this)">
+      <span class="drink-icon">🟣</span>
+      <span class="drink-name">Taro</span>
+    </button>
+    <button class="drink-btn" data-drink="matcha" data-color="#7ab87a" data-emoji="🍵" onclick="selectDrink(this)">
+      <span class="drink-icon">🍵</span>
+      <span class="drink-name">Matcha</span>
+    </button>
+    <button class="drink-btn" data-drink="strawberry" data-color="#f47da0" data-emoji="🍓" onclick="selectDrink(this)">
+      <span class="drink-icon">🍓</span>
+      <span class="drink-name">Strawberry</span>
+    </button>
+  </div>
+
+  <button class="start-btn" onclick="startGame()">Let's Go! 🎮</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="game-screen" class="screen">
+  <canvas id="game-canvas"></canvas>
+</div>
+
+<!-- GAME OVER SCREEN -->
+<div id="gameover-screen" class="screen">
+  <div class="go-drink" id="go-drink-icon">🧋</div>
+  <div class="go-title" id="go-title">Game Over!</div>
+  <div class="go-score" id="go-score">Score: 0</div>
+  <span class="highscore-tag" id="hs-tag">🏆 New High Score!</span>
+  <div class="go-msg" id="go-msg">Keep practicing!</div>
+  <div class="btn-row">
+    <button class="retry-btn" onclick="retryGame()">Retry</button>
+    <button class="menu-btn" onclick="goMenu()">Menu</button>
+  </div>
+</div>
+
+<!-- HUD -->
+<div id="hud">
+  <div class="hud-item">
+    <span class="hud-label">Score</span>
+    <span id="score-display">0</span>
+  </div>
+  <div class="hud-item" style="text-align:center">
+    <span class="hud-label">Level</span>
+    <span id="level-display">1</span>
+  </div>
+  <div class="hud-item" style="text-align:right">
+    <span class="hud-label">Lives</span>
+    <span class="hearts" id="hearts-display">❤️❤️❤️</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
